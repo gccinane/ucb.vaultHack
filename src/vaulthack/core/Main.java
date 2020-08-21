@@ -20,10 +20,10 @@ public class Main {
 		
 		//Criar os sobreviventes e colocar-los em uma coleção
 		
-		ArrayList<Survivors> survivors = new ArrayList<Survivors>();
+		ArrayList<Survivor> survivors = new ArrayList<Survivor>();
 		
-		for (Survivors survivor : survivors) {
-			
+		for (Survivor survivor : survivors) {
+			survivor.start();
 		}
 		
 		//Criar os zumbis, eles tem um temporizador

@@ -1,6 +1,6 @@
 package vaulthack.models;
 
-public class Survivors extends Thread{
+public class Survivor extends Thread{
 	//Cada sobrevivente tem uma referência ao bunker
 	protected Bunker bunker;
 	
@@ -9,7 +9,7 @@ public class Survivors extends Thread{
 	private int firstAttempt = 0;
 	
 	//Construtor do sobrevivente 
-	public Survivors(Bunker bunker, int firstAttempt) {
+	public Survivor(Bunker bunker, int firstAttempt) {
 		this.bunker = bunker;
 		setFirstAttempt(firstAttempt);
 		setName(this.getClass().getSimpleName());
