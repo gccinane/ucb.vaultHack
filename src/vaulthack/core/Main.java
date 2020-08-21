@@ -20,16 +20,22 @@ public class Main {
 		
 		//Criar os sobreviventes e colocar-los em uma coleção
 		
-		ArrayList<Survivor> survivors = new ArrayList<Survivor>();
-		
-		for (Survivor survivor : survivors) {
-			survivor.start();
+		ArrayList<Thread> threads = new ArrayList<Thread>();
+		for(int i = 0; i < 10; i++) {
+			threads.add(new Survivor(bunker, passwordGenerator.nextInt(Bunker.MAX_PASSWORD)));
 		}
+		
+		
 		
 		//Criar os zumbis, eles tem um temporizador
 		
+		threads.add(new Zombie());
+		
 		//Startar as threads
 		
+		for (Thread thread : threads) {
+			thread.start();
+		}
 		//Finaliza o programa
 
 	}

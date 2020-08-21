@@ -37,6 +37,13 @@ public class Survivor extends Thread{
 		}
 	}
 	
+	@Override
+	public synchronized void start() {
+		
+		super.start();
+		System.out.println("Thread iniciando: " + this.getName());
+	}
+	
 	
 	@Override
 	public void run() {
